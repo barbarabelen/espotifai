@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Ejercicios</title>
+    </head>
+    <body>
+        <h1>Ejercicios</h1>
+        <ol>
+            <li>
+                Completar la documentación con los endpoints existentes en <span><code>/public/api.html</code></span>
+            </li>
+            <li>
+                Agregar las rutas <span><code>/api/artists/random</code></span
+                >, <span><code>/api/album</code></span> y los controladores <span><code>randomArtist</code></span
+                >, <span><code>randomAlbum</code></span> para obtener un artista/album aleatorio. Si se usa alguna
+                funcion utilitaria, guardarla en /utils e importarla donde sea necesaria
+            </li>
+            <li>
+                Agregarle funcionalidad al controlador <span><code>albums</code></span> para que pueda recibir un
+                <em>query.param</em> <span><code>?year</code></span
+                >, que permita filtrar los resultados por año.
+            </li>
+            <li>
+                Crear un endpoint de tipo POST, llamado <span><code>createAlbum</code></span> que permita agregar un
+                nuevo album en la ruta <span><code>/api/albums</code></span>
+            </li>
+            <li>
+                Validar el input en la logica de los controladores 'createArtist' y 'createAlbum':
+                <ul>
+                    <li>En 'createArtist', 'name' es obligatorio</li>
+                    <li>En 'createAlbum', 'name', 'artist' y 'year' son obligatorios</li>
+                    <li>
+                        En caso de que el input no sea valido por algun motivo, responder el siguiente mensaje con
+                        status 400 (Bad Request): <em>'attribute_name'</em> is required'
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Investigar el módulo <a href="https://www.npmjs.com/package/joi">joi</a> de npm y ver cómo podemos
+                rehacer el item anterior usándolo
+            </li>
+            <li>
+                Implementar el controlador 'updateArtist':
+                <ul>
+                    <li>Busca el artista con el id :id, si no existe, retorna 404</li>
+                    <li>Valida el input. Si no es valido, retorna 400</li>
+                    <li>Si es valido, actualiza el recurso y lo retorna</li>
+                </ul>
+            </li>
+            <li>Idem, para 'updateAlbum'</li>
+            <li>Implementar 'deleteArtist' y 'deleteAlbum'</li>
+        </ol>
+    </body>
+</html>
